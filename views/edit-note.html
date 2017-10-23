@@ -1,0 +1,57 @@
+<!-- todo: check for Enter (submit) and Escape (cancel) keys! -->
+
+<h2>{{ editing ? "Edit" : "Add" }} Note</h2>
+
+<fieldset>
+    <legend>Caption</legend>
+    <input id="editcaption" type="text" ng-model="currentNote.caption">
+</fieldset>
+
+<fieldset ng-if="noteDefaults[currentList.type].hasOwnProperty('quantity')">
+    <legend>Quantity</legend>
+    <input type="number" ng-model="currentNote.quantity">
+</fieldset>
+
+<fieldset ng-if="noteDefaults[currentList.type].hasOwnProperty('done')">
+    <legend>Status</legend>
+    <input type="checkbox" id="noteDone" ng-model="currentNote.done"><label for="noteDone">done</label>
+</fieldset>
+
+<fieldset>
+    <legend>Color</legend>
+    <div class="colorbox red" ng-click="setNoteColor(currentNote, 'red');" ng-class="{'active': currentNote.color==='red'}"></div>
+    <div class="colorbox yellow" ng-click="setNoteColor(currentNote, 'yellow');" ng-class="{'active': currentNote.color==='yellow'}"></div>
+    <div class="colorbox green" ng-click="setNoteColor(currentNote, 'green');" ng-class="{'active': currentNote.color==='green'}"></div>
+    <div class="colorbox blue" ng-click="setNoteColor(currentNote, 'blue');" ng-class="{'active': currentNote.color==='blue'}"></div>
+    <div class="colorbox purple" ng-click="setNoteColor(currentNote, 'purple');" ng-class="{'active': currentNote.color==='purple'}"></div>
+    <div class="colorbox black" ng-click="setNoteColor(currentNote, 'black');" ng-class="{'active': currentNote.color==='black'}"></div>
+</fieldset>
+
+
+<fieldset ng-if="noteDefaults[currentList.type].hasOwnProperty('priority')">
+    <legend>Priotity</legend>
+    <select ng-model="currentNote.priority">
+        <option value="0">low</option>
+        <option value="1">medium</option>
+        <option value="2">high</option>
+    </select>
+</fieldset>
+
+<fieldset ng-if="noteDefaults[currentList.type].hasOwnProperty('due')">
+    <legend>Due Date</legend>
+    <!-- todo:  - proper date handling, date picker etc.
+                - check if overdue        
+    -->
+    <input type="text" ng-model="currentNote.due">
+</fieldset>
+
+<fieldset ng-if="noteDefaults[currentList.type].hasOwnProperty('details')">
+    <legend>Details</legend>
+    <textarea rows="5" ng-model="currentNote.details"></textarea>
+</fieldset>
+
+<div class="dialogfooter">
+    <button ng-if="editing" ng-click="deleteNote()" style="float: left;">Delete Note</button>
+    <button ng-click="cancelEditNote()">Cancel</button>
+    <button class="default" ng-click="applyEditNote()">{{ editing ? "Save changes" : "OK" }}</button>
+</div>

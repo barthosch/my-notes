@@ -1,0 +1,410 @@
+$menu-color: rgb(80,80,80);
+$menu-bgColor: rgb(245, 245, 245);
+$accentual-color: rgb(255,255,255);
+$accentual-bgColor: rgb(13, 173, 106);
+$head-bgColor: rgb(8, 126, 76);
+$head-color: white;
+
+body, html {
+    font-family: "Helvetica", sans-serif;
+    color: black;
+    font-weight: 200;
+    background-color: white;
+}
+
+h1 {
+    background-color: $head-bgColor;
+    font-weight: 100;
+    font-size: 18pt;
+    position: absolute; 
+    display: block;
+    padding: 10px;
+    color: $head-color;
+    margin: 0px;
+    left: 0px; top: 0px; right: 0px; height: 30px;
+}
+
+#appmain{
+    position: absolute;
+    top: 50px; left: 0px; right: 0px; bottom: 0px;
+}
+
+.badge {
+    position: absolute;
+    right: 10px;
+    font-size: 9pt;
+    font-weight: bold;
+    opacity: 0.6;
+    background-color: $menu-color;
+    color: $menu-bgColor;
+    border-radius: 10px;
+    padding: 2px 9px;
+}
+
+.modalwrap {
+    z-index: 99999;
+    position: fixed;
+    left: 0px; top: 0px; right: 0px; bottom: 0px;
+    background-color: rgba(220,220,220,0.8);
+}
+.dialog {
+    position: fixed;
+    width: 300px;
+    padding: 20px;
+    margin-left: -170px;
+    left: 50%;
+    top: 20px; 
+    padding-bottom: 80px;
+    background-color: white;
+    box-shadow: 0px 12px 40px rgba(0,0,0,0.2);
+    overflow-y: auto;
+    font-size: 11pt;
+    h2 {
+        margin-top: 6px;
+        font-size: 14pt;
+    }
+    fieldset {
+        padding: 0px;
+        margin-bottom: 10px;
+        border: none;
+        legend {
+            font-size: 10pt;
+            width: 100%;
+            margin: 0px 0 5px 0;
+            border-bottom: 1px solid rgb(180,180,180);
+            color: rgb(100,100,100);
+        }
+        font-size: 13pt;
+        input[type=text], input[type=number], input[type=date], select, textarea{
+            width: 100%;
+            padding: 3px;
+            font-size: 13pt;
+            text-align: left;
+        }
+    }
+    .dialogfooter {
+        position: absolute; bottom: 0px;
+        background-color: $menu-bgColor;
+        left: 0px; right: 0px;
+        height: 40px;
+        padding: 10px;
+        text-align: right;
+       
+        button {
+            display: inline-block;
+            color: $accentual-bgColor;
+            &.default {
+                background-color: $accentual-bgColor;
+                color: $accentual-color;
+
+            }
+        }
+    }
+}
+
+button {
+    display: inline-block;
+    color: $accentual-color;
+    background-color: transparent;
+    font-weight: 600;
+    text-align: center;
+    font-size: 9pt;
+    padding: 7px 8px;
+    margin-right: 1px;
+    border: none;
+    text-transform: uppercase;
+    &.default {
+        background-color: $accentual-bgColor;
+        color: $accentual-color;
+
+    }
+
+}
+
+
+.colorbox {
+    display: inline-block;
+    width: 20px; height: 20px;
+    border: 2px solid white;
+    outline: 1px solid #eee;
+    margin-right: 2px;
+    &.red {
+        background-color: red;
+    }
+    &.yellow {
+        background-color: darkgoldenrod;
+    }
+    &.blue {
+        background-color: blue;
+    }
+    &.green {
+        background-color: green;
+    }
+    &.purple {
+        background-color: purple;
+    }
+    &.black {
+        background-color: black;
+    }
+    &.active {
+        outline: 2px solid $accentual-bgColor;
+    }
+}
+#listwrap {
+    position: absolute;
+    border-left: 4px solid rgb(185, 185, 185);
+    top: 0px; left: 200px; right: 0px; bottom: 0px;
+    h2 {
+        position: absolute;
+        margin: 0px;
+        padding: 9px 250px 0px 20px;
+        font-size: 14pt;
+        font-weight: 100;
+        color: $accentual-color;
+        text-align: left;
+        left: 0px; top: 0px; right: 0px; height: 33px;
+        background-color: $accentual-bgColor;
+        
+    }
+    .listfunctions {
+        position: absolute;
+        right: 10px; top: 5px;
+        color: white;
+        label {
+            margin-right: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 9pt;
+        }
+        
+    }
+    .listdisplay {
+        position: absolute;
+        left: 0px; top: 42px; right: 0px; bottom: 0px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 0px;
+        ul {
+            margin: 1px;
+            padding: 0px;
+            li {
+                cursor: default;
+                display: block;
+                margin-top: 2px;
+                padding: 0px;
+                height: 45px;
+                font-size: 15pt;
+                border-bottom: 1px solid $menu-bgColor;
+                color: $menu-color;
+                margin-bottom: -1px;
+                .caption {
+                    border-left: 15px solid transparent;
+                    border-bottom: 2px solid transparent;
+                    height: 14px;
+                    padding: 10px 15px 20px 45px; 
+                    &.red {
+                        border-color: red;
+                    }
+                    &.yellow {
+                        border-color: darkgoldenrod;
+                    }
+                    &.blue {
+                        border-color: blue;
+                    }
+                    &.green {
+                        border-color: green;
+                    }
+                    &.purple {
+                        border-color: purple;
+                    }
+                    &.black {
+                        border-color: black;
+                    }
+                }
+                .checkbox {
+                    position: absolute;
+                    font: 18pt "FontAwesome";
+                    left: 10px; width: 30px; height: 39px;
+                    padding: 15px 10px 0px 20px;
+                    margin:-5px 0px 0px -5px;
+                    opacity: 0.6;
+                    display: block;
+                    &::before {
+                        content: "\f1db";
+                    }
+                } 
+                .priority_0, .priority_1, .priority_2, .duedate {
+                    font-family: "Helvetica", sans-serif;
+                    position: absolute;
+                    opacity: 0.5;
+                    right: 30px;
+                    margin-top: -35px;
+                }
+                .priority_0, .priority_1, .priority_2 {
+                    position: absolute;
+                    opacity: 0.5;
+                    right: 30px;
+                    margin-top: -35px;
+                    font: 18pt "FontAwesome";
+                }
+                .priority_0::after { content: "\f103"; }
+                .priority_1::after { }
+                .priority_2::after { content: "\f102"; }
+                
+                &.done {
+                    background-color: rgb(250,250,250);
+                    color: rgb(150,150,150);
+                    .caption {
+                        text-decoration: line-through;
+                        font-style: italic;
+                    }
+                    .checkbox {
+                        color: green;
+                        opacity: 1;
+                        &::before {
+                            content: "\f058";
+                        }
+                        
+                    }
+                }
+            }
+            .addnote {
+                position: fixed;
+                bottom: 40px; 
+                right: 40px;
+                width: 55px; height: 55px;
+                border-radius: 100%;
+                text-align: center;
+                background-color: $accentual-bgColor;
+                color: $accentual-color;
+                box-shadow: 0px 2px 11px rgba(0,0,0,0.4);
+                &::after{
+                    font-size: 35pt; font-weight: 100;
+                    content: "+"; margin: 9px 0px 0px 4px;
+                    position: absolute;
+                    left: 8px; top: -12px;
+                }
+            }
+        }
+        
+        &.shopping {
+           
+            .quantity {
+                position: absolute;
+                opacity: 0.5;
+                right: 30px;
+                margin-top: -35px;
+            }
+
+        }
+        &.notes {
+            ul {
+                padding: 20px;
+                text-align: center;
+
+                li {
+                    display: inline-block;
+                    margin: 13px;
+                    border: none; 
+                    background: transparent;
+
+                    .caption {
+                        position: relative;
+                        box-shadow: 2px 5px 10px rgba(0,0,0,0.1);
+                        width: 140px; height: 140px;
+                        background-color: yellow;
+                        vertical-align: top;    
+                        padding: 10px;
+                        font: 12pt "Comic Sans Ms";
+                        overflow: hidden;
+                        transform: rotate(-2deg);
+                        border: none;
+                        &:hover {
+                            overflow: auto;
+                        }
+                        &.red {
+                            color: red;
+                        }
+                        &.yellow {
+                            color: darkgoldenrod;
+                        }
+                        &.blue {
+                            color: blue;
+                        }
+                        &.green {
+                            color: green;
+                        }
+                        &.purple {
+                            color: purple;
+                        }
+                        &.black {
+                            color: black;
+                        }
+                    }
+                    .checkbox {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#listsmenu {
+    position: absolute;
+    list-style: none;
+    margin: 0px; padding: 0px;
+    left: 0px; 
+    top: 0px;
+    bottom: 45px;
+    width: 200px;
+    overflow-y: auto;
+    background-color: $menu-bgColor;
+    color: $menu-color;
+    li {
+        display: block;
+        border-bottom: 2px solid white;
+        font-size: 10pt;
+        height: 30px;
+        padding: 15px 0 0 1px;
+        cursor: default;
+        &::before {
+            display: inline-block;
+            margin: -5px 2px 0 7px;
+            vertical-align: middle;
+            text-align: center;
+            font: 13pt "FontAwesome";
+            width: 25px;
+            content: "?"
+        }
+        &.notes::before {
+            content: "\f249";
+        }
+        &.deadlines::before {
+            content: "\f274";
+        }
+        &.tasks::before {
+            content: "\f0ae";
+        }
+        &.shopping::before {
+            content: "\f07a";
+        }
+        &.addlist{
+            position: fixed;
+            bottom: 0px;
+            width: 200px;
+            color: $menu-bgColor;
+            background-color: $menu-color;
+            &::before {
+                content: "\f055";
+            }
+        }
+        
+        &.active {
+            background-color: $accentual-bgColor;
+            color: $accentual-color;
+            font-weight: bold;
+            transition: 200ms all ease;
+        }
+    }
+}

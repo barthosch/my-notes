@@ -1,0 +1,21 @@
+<h2>{{ currentList.name }}</h2>
+<div class="listfunctions">
+    <span ng-show="currentList.notes.length>0">
+        <input type="checkbox" id="hideDone" ng-model="currentList.hideDone"><label for="hideDone">Hide done items</label>
+        <button ng-click="allPending()">All pending</button>
+        <button ng-click="allDone()">All done</button>   
+    </span>
+    <button ng-click="editList()">Edit List</button>
+</div>
+<div class="listdisplay {{currentList.type}}" >
+    <ul>
+        <li ng-repeat="note in currentList.notes track by $index" ng-class="{'done': note.done }" ng-show="currentList.hideDone === true ? !note.done : true">
+            <div class="checkbox" ng-click="note.done = !note.done; saveData()"></div>
+            <div class="caption {{note.color}}" ng-click="editNote(note);">{{ note.caption }}</div>
+            <div class="quantity" ng-if="noteDefaults[currentList.type].hasOwnProperty('quantity')" ng-click="editNote(note);">{{ note.quantity }}</div>
+            <div class="priority_{{note.priority}}" ng-if="noteDefaults[currentList.type].hasOwnProperty('priority')" ng-click="editNote(note);"></div>
+            <div class="duedate" ng-if="noteDefaults[currentList.type].hasOwnProperty('due') && note.due" ng-click="editNote(note);">Due by {{ note.due }}</div> 
+        </li>
+        <div class="addnote" ng-click="addNote()"></div>
+    </ul>
+</div>

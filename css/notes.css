@@ -1,0 +1,421 @@
+/* line 8, /www/htdocs/angularjs/css/notes.scss */
+body, html {
+  font-family: "Helvetica", sans-serif;
+  color: black;
+  font-weight: 200;
+  background-color: white; }
+
+/* line 15, /www/htdocs/angularjs/css/notes.scss */
+h1 {
+  background-color: #087e4c;
+  font-weight: 100;
+  font-size: 18pt;
+  position: absolute;
+  display: block;
+  padding: 10px;
+  color: white;
+  margin: 0px;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 30px; }
+
+/* line 27, /www/htdocs/angularjs/css/notes.scss */
+#appmain {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
+
+/* line 32, /www/htdocs/angularjs/css/notes.scss */
+.badge {
+  position: absolute;
+  right: 10px;
+  font-size: 9pt;
+  font-weight: bold;
+  opacity: 0.6;
+  background-color: #505050;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 2px 9px; }
+
+/* line 44, /www/htdocs/angularjs/css/notes.scss */
+.modalwrap {
+  z-index: 99999;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(220, 220, 220, 0.8); }
+
+/* line 50, /www/htdocs/angularjs/css/notes.scss */
+.dialog {
+  position: fixed;
+  width: 300px;
+  padding: 20px;
+  margin-left: -170px;
+  left: 50%;
+  top: 20px;
+  padding-bottom: 80px;
+  background-color: white;
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  font-size: 11pt; }
+  /* line 62, /www/htdocs/angularjs/css/notes.scss */
+  .dialog h2 {
+    margin-top: 6px;
+    font-size: 14pt; }
+  /* line 66, /www/htdocs/angularjs/css/notes.scss */
+  .dialog fieldset {
+    padding: 0px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 13pt; }
+    /* line 70, /www/htdocs/angularjs/css/notes.scss */
+    .dialog fieldset legend {
+      font-size: 10pt;
+      width: 100%;
+      margin: 0px 0 5px 0;
+      border-bottom: 1px solid #b4b4b4;
+      color: #646464; }
+    /* line 78, /www/htdocs/angularjs/css/notes.scss */
+    .dialog fieldset input[type=text], .dialog fieldset input[type=number], .dialog fieldset input[type=date], .dialog fieldset select, .dialog fieldset textarea {
+      width: 100%;
+      padding: 3px;
+      font-size: 13pt;
+      text-align: left; }
+  /* line 85, /www/htdocs/angularjs/css/notes.scss */
+  .dialog .dialogfooter {
+    position: absolute;
+    bottom: 0px;
+    background-color: whitesmoke;
+    left: 0px;
+    right: 0px;
+    height: 40px;
+    padding: 10px;
+    text-align: right; }
+    /* line 93, /www/htdocs/angularjs/css/notes.scss */
+    .dialog .dialogfooter button {
+      display: inline-block;
+      color: #0dad6a; }
+      /* line 96, /www/htdocs/angularjs/css/notes.scss */
+      .dialog .dialogfooter button.default {
+        background-color: #0dad6a;
+        color: white; }
+
+/* line 105, /www/htdocs/angularjs/css/notes.scss */
+button {
+  display: inline-block;
+  color: white;
+  background-color: transparent;
+  font-weight: 600;
+  text-align: center;
+  font-size: 9pt;
+  padding: 7px 8px;
+  margin-right: 1px;
+  border: none;
+  text-transform: uppercase; }
+  /* line 116, /www/htdocs/angularjs/css/notes.scss */
+  button.default {
+    background-color: #0dad6a;
+    color: white; }
+
+/* line 125, /www/htdocs/angularjs/css/notes.scss */
+.colorbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  outline: 1px solid #eee;
+  margin-right: 2px; }
+  /* line 131, /www/htdocs/angularjs/css/notes.scss */
+  .colorbox.red {
+    background-color: red; }
+  /* line 134, /www/htdocs/angularjs/css/notes.scss */
+  .colorbox.yellow {
+    background-color: darkgoldenrod; }
+  /* line 137, /www/htdocs/angularjs/css/notes.scss */
+  .colorbox.blue {
+    background-color: blue; }
+  /* line 140, /www/htdocs/angularjs/css/notes.scss */
+  .colorbox.green {
+    background-color: green; }
+  /* line 143, /www/htdocs/angularjs/css/notes.scss */
+  .colorbox.purple {
+    background-color: purple; }
+  /* line 146, /www/htdocs/angularjs/css/notes.scss */
+  .colorbox.black {
+    background-color: black; }
+  /* line 149, /www/htdocs/angularjs/css/notes.scss */
+  .colorbox.active {
+    outline: 2px solid #0dad6a; }
+
+/* line 153, /www/htdocs/angularjs/css/notes.scss */
+#listwrap {
+  position: absolute;
+  border-left: 4px solid #b9b9b9;
+  top: 0px;
+  left: 200px;
+  right: 0px;
+  bottom: 0px; }
+  /* line 157, /www/htdocs/angularjs/css/notes.scss */
+  #listwrap h2 {
+    position: absolute;
+    margin: 0px;
+    padding: 9px 250px 0px 20px;
+    font-size: 14pt;
+    font-weight: 100;
+    color: white;
+    text-align: left;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 33px;
+    background-color: #0dad6a; }
+  /* line 169, /www/htdocs/angularjs/css/notes.scss */
+  #listwrap .listfunctions {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: white; }
+    /* line 173, /www/htdocs/angularjs/css/notes.scss */
+    #listwrap .listfunctions label {
+      margin-right: 5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 9pt; }
+  /* line 181, /www/htdocs/angularjs/css/notes.scss */
+  #listwrap .listdisplay {
+    position: absolute;
+    left: 0px;
+    top: 42px;
+    right: 0px;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0px; }
+    /* line 187, /www/htdocs/angularjs/css/notes.scss */
+    #listwrap .listdisplay ul {
+      margin: 1px;
+      padding: 0px; }
+      /* line 190, /www/htdocs/angularjs/css/notes.scss */
+      #listwrap .listdisplay ul li {
+        cursor: default;
+        display: block;
+        margin-top: 2px;
+        padding: 0px;
+        height: 45px;
+        font-size: 15pt;
+        border-bottom: 1px solid whitesmoke;
+        color: #505050;
+        margin-bottom: -1px; }
+        /* line 200, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay ul li .caption {
+          border-left: 15px solid transparent;
+          border-bottom: 2px solid transparent;
+          height: 14px;
+          padding: 10px 15px 20px 45px; }
+          /* line 205, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li .caption.red {
+            border-color: red; }
+          /* line 208, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li .caption.yellow {
+            border-color: darkgoldenrod; }
+          /* line 211, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li .caption.blue {
+            border-color: blue; }
+          /* line 214, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li .caption.green {
+            border-color: green; }
+          /* line 217, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li .caption.purple {
+            border-color: purple; }
+          /* line 220, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li .caption.black {
+            border-color: black; }
+        /* line 224, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay ul li .checkbox {
+          position: absolute;
+          font: 18pt "FontAwesome";
+          left: 10px;
+          width: 30px;
+          height: 39px;
+          padding: 15px 10px 0px 20px;
+          margin: -5px 0px 0px -5px;
+          opacity: 0.6;
+          display: block; }
+          /* line 232, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li .checkbox::before {
+            content: "\f1db"; }
+        /* line 236, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay ul li .priority_0, #listwrap .listdisplay ul li .priority_1, #listwrap .listdisplay ul li .priority_2, #listwrap .listdisplay ul li .duedate {
+          font-family: "Helvetica", sans-serif;
+          position: absolute;
+          opacity: 0.5;
+          right: 30px;
+          margin-top: -35px; }
+        /* line 243, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay ul li .priority_0, #listwrap .listdisplay ul li .priority_1, #listwrap .listdisplay ul li .priority_2 {
+          position: absolute;
+          opacity: 0.5;
+          right: 30px;
+          margin-top: -35px;
+          font: 18pt "FontAwesome"; }
+        /* line 250, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay ul li .priority_0::after {
+          content: "\f103"; }
+        /* line 252, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay ul li .priority_2::after {
+          content: "\f102"; }
+        /* line 254, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay ul li.done {
+          background-color: #fafafa;
+          color: #969696; }
+          /* line 257, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li.done .caption {
+            text-decoration: line-through;
+            font-style: italic; }
+          /* line 261, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay ul li.done .checkbox {
+            color: green;
+            opacity: 1; }
+            /* line 264, /www/htdocs/angularjs/css/notes.scss */
+            #listwrap .listdisplay ul li.done .checkbox::before {
+              content: "\f058"; }
+      /* line 271, /www/htdocs/angularjs/css/notes.scss */
+      #listwrap .listdisplay ul .addnote {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        width: 55px;
+        height: 55px;
+        border-radius: 100%;
+        text-align: center;
+        background-color: #0dad6a;
+        color: white;
+        box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.4); }
+        /* line 281, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay ul .addnote::after {
+          font-size: 35pt;
+          font-weight: 100;
+          content: "+";
+          margin: 9px 0px 0px 4px;
+          position: absolute;
+          left: 8px;
+          top: -12px; }
+    /* line 292, /www/htdocs/angularjs/css/notes.scss */
+    #listwrap .listdisplay.shopping .quantity {
+      position: absolute;
+      opacity: 0.5;
+      right: 30px;
+      margin-top: -35px; }
+    /* line 301, /www/htdocs/angularjs/css/notes.scss */
+    #listwrap .listdisplay.notes ul {
+      padding: 20px;
+      text-align: center; }
+      /* line 305, /www/htdocs/angularjs/css/notes.scss */
+      #listwrap .listdisplay.notes ul li {
+        display: inline-block;
+        margin: 13px;
+        border: none;
+        background: transparent; }
+        /* line 311, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay.notes ul li .caption {
+          position: relative;
+          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+          width: 140px;
+          height: 140px;
+          background-color: yellow;
+          vertical-align: top;
+          padding: 10px;
+          font: 12pt "Comic Sans Ms";
+          overflow: hidden;
+          transform: rotate(-2deg);
+          border: none; }
+          /* line 322, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay.notes ul li .caption:hover {
+            overflow: auto; }
+          /* line 325, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay.notes ul li .caption.red {
+            color: red; }
+          /* line 328, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay.notes ul li .caption.yellow {
+            color: darkgoldenrod; }
+          /* line 331, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay.notes ul li .caption.blue {
+            color: blue; }
+          /* line 334, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay.notes ul li .caption.green {
+            color: green; }
+          /* line 337, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay.notes ul li .caption.purple {
+            color: purple; }
+          /* line 340, /www/htdocs/angularjs/css/notes.scss */
+          #listwrap .listdisplay.notes ul li .caption.black {
+            color: black; }
+        /* line 344, /www/htdocs/angularjs/css/notes.scss */
+        #listwrap .listdisplay.notes ul li .checkbox {
+          display: none; }
+
+/* line 353, /www/htdocs/angularjs/css/notes.scss */
+#listsmenu {
+  position: absolute;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  left: 0px;
+  top: 0px;
+  bottom: 45px;
+  width: 200px;
+  overflow-y: auto;
+  background-color: whitesmoke;
+  color: #505050; }
+  /* line 364, /www/htdocs/angularjs/css/notes.scss */
+  #listsmenu li {
+    display: block;
+    border-bottom: 2px solid white;
+    font-size: 10pt;
+    height: 30px;
+    padding: 15px 0 0 1px;
+    cursor: default; }
+    /* line 371, /www/htdocs/angularjs/css/notes.scss */
+    #listsmenu li::before {
+      display: inline-block;
+      margin: -5px 2px 0 7px;
+      vertical-align: middle;
+      text-align: center;
+      font: 13pt "FontAwesome";
+      width: 25px;
+      content: "?"; }
+    /* line 380, /www/htdocs/angularjs/css/notes.scss */
+    #listsmenu li.notes::before {
+      content: "\f249"; }
+    /* line 383, /www/htdocs/angularjs/css/notes.scss */
+    #listsmenu li.deadlines::before {
+      content: "\f274"; }
+    /* line 386, /www/htdocs/angularjs/css/notes.scss */
+    #listsmenu li.tasks::before {
+      content: "\f0ae"; }
+    /* line 389, /www/htdocs/angularjs/css/notes.scss */
+    #listsmenu li.shopping::before {
+      content: "\f07a"; }
+    /* line 392, /www/htdocs/angularjs/css/notes.scss */
+    #listsmenu li.addlist {
+      position: fixed;
+      bottom: 0px;
+      width: 200px;
+      color: whitesmoke;
+      background-color: #505050; }
+      /* line 398, /www/htdocs/angularjs/css/notes.scss */
+      #listsmenu li.addlist::before {
+        content: "\f055"; }
+    /* line 403, /www/htdocs/angularjs/css/notes.scss */
+    #listsmenu li.active {
+      background-color: #0dad6a;
+      color: white;
+      font-weight: bold;
+      transition: 200ms all ease; }
+
+/*# sourceMappingURL=notes.css.map */

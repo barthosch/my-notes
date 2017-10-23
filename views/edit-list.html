@@ -1,0 +1,29 @@
+<!-- todo: check for Enter (submit) and Escape (cancel) keys! -->
+
+<h2>{{ editingList ? "Edit" : "Add" }} List</h2>
+
+<fieldset>
+    <legend>List name</legend>
+    <input type="text" ng-model="currentList.name">
+</fieldset>
+
+<fieldset>
+    <legend>List type</legend>
+    <select ng-model="currentList.type">
+        <option value="notes">Sticky notes</option>
+        <option value="deadlines">Deadlines</option>
+        <option value="tasks">Tasks</option>
+        <option value="shopping">Shopping list</option>
+    </select>
+</fieldset>
+
+<fieldset>
+    <legend>List options</legend>
+    <input type="checkbox" id="dialogHideDone" ng-model="currentList.hideDone"><label for="dialogHideDone">Hide done items</label>
+</fieldset>
+
+<div class="dialogfooter">
+    <button ng-if="editingList" ng-click="deleteList()" style="float: left;">Delete List</button>
+    <button ng-click="cancelEditList()">Cancel</button>
+    <button class="default" ng-click="applyEditList()">{{ editing ? "Save changes" : "OK" }}</button>
+</div>

@@ -1,0 +1,40 @@
+<!-- 
+    Probearbeit JavaScript Web-App "Notizen"
+    Eingereicht von Sven Bartholomay, mail@sven-bartholomay.de
+
+    Weitere Informationen finden Sie in der readme.txt
+-->
+<!doctype html>
+<html ng-app="notes">
+    <head>
+        <meta charset="utf8" />
+        <title>MyNotes</title>
+        <link rel="stylesheet" href="./css/notes.css">
+        <link rel="stylesheet" href="./css/font-awesome.min.css">
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/notes.js"></script>
+    </head>
+    <body>
+        <h1>MyNotes</h1>
+        <div id="appmain" ng-controller="NotesController">
+            <div id="listsoverview">
+                <ul id="listsmenu">
+                    <li ng-repeat="list in lists track by $index" ng-click="selectList(list)" ng-dblclick="editList()" class="{{list.type}}" ng-class="{ 'active' : list == currentList }">
+                        {{ list.name }} <span class="badge" ng-if="list.notes.length > 0">{{list.notes.length}}</span>
+                    </li>
+                    <li class="addlist" ng-click="addList()">Add List</li>
+                </ul>
+
+                <div display-list id="listwrap"></div>
+            </div>
+
+            <div class="modalwrap" ng-if="editing || adding">
+                <div edit-note class="dialog"></div>
+            </div>
+
+            <div class="modalwrap" ng-if="editingList || addingList">
+                <div edit-list class="dialog"></div>
+            </div>
+        </div>
+    </body>
+</html>
